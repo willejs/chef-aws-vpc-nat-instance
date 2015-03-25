@@ -18,4 +18,3 @@
 #
 
 include_recipe 'aws-vpc-nat-instance::masquerade'
-
