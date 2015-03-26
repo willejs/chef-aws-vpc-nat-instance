@@ -29,7 +29,7 @@ simple_iptables_rule 'set up nat' do
   table 'nat'
   direction 'POSTROUTING'
   chain 'POSTROUTING'
-  chain_condition '-o eth0'
+  chain_condition "-o #{node['aws-vpc-nat-instance']['interface']}"
   jump 'MASQUERADE'
   rule " -s #{node['aws-vpc-nat-instance']['ipmasq_src']}"
 end
