@@ -8,3 +8,4 @@ version          '0.1.0'
 
 depends 'simple_iptables', '= 0.7.1'
 depends 'sysctl', '= 0.6.2'
+depends 'chef-sugar', '= 3.0.1'

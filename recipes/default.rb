@@ -17,4 +17,10 @@
 # limitations under the License.
 #
 
+include AwsVpcNatInstance::Helper
+log(AwsVpcNatInstance::Helper::test)
+
+include_recipe 'chef-sugar::default'
 include_recipe 'aws-vpc-nat-instance::masquerade'
+
+include_recipe 'aws-vpc-nat-instance::ec2' if ec2?
