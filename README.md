@@ -1,10 +1,10 @@
 # aws-vpc-nat-instance-cookbook
 
-TODO: Enter the cookbook description here.
+This is a simple cookbook to setup a NAT instance, and additionally set source destination checking for the instance off in amazon. 
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+- Ubuntu 12.04
 
 ## Attributes
 
@@ -16,10 +16,31 @@ TODO: List your supported platforms.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['aws-vpc-nat-instance']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
+    <td><tt>['aws-vpc-nat-instance']['ipmasq_src']</tt></td>
+    <td>String</td>
+    <td>10.0.0.0/8</td>
     <td><tt>true</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['aws-vpc-nat-instance']['interface']</tt></td>
+    <td>String</td>
+    <td>eth0</td>
+    <td><tt>true</tt></td>
+  </tr>  
+  <tr>
+    <td><tt>['aws-vpc-nat-instance']['access_key_id']</tt></td>
+    <td>String</td>
+    <td>nil</td>
+  </tr>
+  <tr>
+    <td><tt>['aws-vpc-nat-instance']['secret_access_key']</tt></td>
+    <td>String</td>
+    <td>nil</td>
+  </tr>
+  <tr>
+    <td><tt>['aws-vpc-nat-instance']['disable_source_dest_check']</tt></td>
+    <td>Boolean</td>
+    <td>true</td>
   </tr>
 </table>
 
