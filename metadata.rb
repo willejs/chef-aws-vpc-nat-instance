@@ -1,6 +1,6 @@
 name             'aws-vpc-nat-instance'
 maintainer       'Will Salt'
-maintainer_email 'will@crowdsurge.com'
+maintainer_email 'williamejsalt@gmail.com'
 license          'Apache 2.0'
 description      'Installs/Configures aws-vpc-nat-instance'
 long_description 'Installs/Configures aws-vpc-nat-instance'

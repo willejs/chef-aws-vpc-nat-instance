@@ -60,4 +60,4 @@ Include `aws-vpc-nat-instance` in your node's `run_list`:
 
 ## License and Authors
 
-Author:: Will Salt (<will@crowdsurge.com>)
+Author:: Will Salt (<williamejsalt@gmail.com>)
