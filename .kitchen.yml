@@ -1,6 +1,4 @@
 ---
-driver:
-  name: vagrant
 
 provisioner:
   name: chef_zero
@@ -10,6 +8,21 @@ platforms:
 
 suites:
   - name: default
+    driver:
+      name: vagrant
     run_list:
       - recipe[aws-vpc-nat-instance::default]
-    attributes:
+
+  - name: defaultec2
+    driver:
+      name: ec2
+      aws_ssh_key_id: <%= ENV['aws_ssh_key_id'] %>
+      ssh_key: <%= ENV['ssh_key'] %>
+      security_group_ids: <%= ENV['security_group_ids'] %>
+      subnet_id: <%= ENV['subnet_id'] %>
+      flavor_id: t2.medium
+      region: us-east-1
+      availability_zone: us-east-1c
+      require_chef_omnibus: true
+    run_list:
+      - recipe[aws-vpc-nat-instance::default]
