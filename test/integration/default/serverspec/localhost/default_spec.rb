@@ -2,7 +2,7 @@ require_relative '../spec_helper'
 
 describe 'default' do
   describe command('sysctl net.ipv4.ip_forward') do
-    its(:stdout) { should match /.*= 1/ }
+    its(:stdout) { should match 'net.ipv4.ip_forward = 1' }
   end
 
   describe iptables do
